@@ -1,0 +1,13 @@
+server:
+  port: 9080
+db:
+  source: "jdbc"
+  connection:
+    url: "jdbc:mysql://localhost:3306/shaurma?useSSL=false"
+    username: "root"
+    password: "Evrey229."
+  statements:
+    get-all-customers: "SELECT customers FROM customers"
+    insert-customer: "INSERT INTO customers(name, mob_number, data_added) VALUES (? , ?, ?)"
+    insert-promocode: "INSERT INTO promocodes(promocode, date_added, customer_id) VALUES (?,?,?)"
+    delete-customer-by-id: "DELETE c FROM customers c where c.customer_id = ?"

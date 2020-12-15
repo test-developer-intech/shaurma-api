@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS customers(customer_id BIGINT NOT NULL AUTO_INCREMENT,name VARCHAR(50) NOT NULL,mob_number INT NOT NULL, data_added BIGINT NOT NULL, PRIMARY KEY( customer_id ));
+CREATE TABLE IF NOT EXISTS promocodes(promocode VARCHAR(255) NOT NULL, date_added BIGINT NOT NULL, customer_id BIGINT, PRIMARY KEY( promocode ), FOREIGN KEY ( customer_id ) REFERENCES customers( customer_id ));
